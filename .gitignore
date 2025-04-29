@@ -1,6 +1,7 @@
 # Node & Capacitor
 node_modules/
 ios/
+docs/
 
 # VS Code, macOS artifacts
 .vscode/

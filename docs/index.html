@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LuckyChat</title>
+
+  <!-- App styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Socket.IO client -->
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+  <!-- Your app code -->
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <h1>LuckyChat</h1>
+
+  <!-- Nickname section -->
+  <div id="nick-section">
+    <input id="nick-input" placeholder="Enter your name (or leave blank)" />
+    <button id="set-nick">Set Name</button>
+  </div>
+
+  <!-- Chat history -->
+  <div id="chat"></div>
+
+  <!-- Message controls -->
+  <div id="controls">
+    <input id="msg-input" placeholder="Type a message…" />
+    <button id="send-btn">Send</button>
+  </div>
+
+  <!-- Service Worker registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch(err => console.error('Service Worker registration failed', err));
+    }
+  </script>
+</body>
+</html>
+

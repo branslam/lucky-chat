@@ -1,0 +1,10 @@
+# Node & Capacitor
+node_modules/
+ios/
+
+# VS Code, macOS artifacts
+.vscode/
+.DS_Store
+
+# Logs
+*.log
